@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-container horizen-bar">
-      <header class="inner-wrapper">
+      <header class="inner-container inner-wrapper">
         <div class="logo">
           <BrandLogo />
         </div>
@@ -25,9 +25,6 @@
         </div>
       </header>
     </div>
-    <div class="sub-header-container">
-      <div class="sub-header-inner inner-wrapper">병원목록 (1473)</div>
-    </div>
   </div>
 </template>
 
@@ -37,7 +34,7 @@ import BrandLogo from '../assets/logo-kr.svg';
 import { sayHello } from '../mixin/hello';
 
 export default Vue.extend({
-  name: 'header',
+  name: 'Header',
   components: {
     BrandLogo,
   },
@@ -52,27 +49,15 @@ export default Vue.extend({
   background-color: white;
   top: 0;
 }
-.sub-header-container {
-  margin-top: 50px;
-  height: 57px;
-  font-size: 1.2rem;
-  border-bottom: 1px solid rgb(205, 205, 205);
-}
-.sub-header-inner {
-  font-weight: 600;
-}
 .horizen-bar {
   border-bottom: 1px solid rgb(219, 219, 219);
   width: 100%;
 }
 .inner-wrapper {
-  max-width: 768px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: calc(var(--unit) * 8) calc(var(--unit) * 16);
-  box-sizing: border-box;
+  /* padding: calc(var(--unit) * 8) calc(var(--unit) * 16); */
 }
 header {
   height: 50px;
@@ -92,13 +77,13 @@ header {
   align-items: center;
 }
 
-ul {
-  list-style: none;
-  padding-inline-start: 0;
-  display: flex;
+.navigation {
+  ul {
+    display: flex;
 
-  li:not(:last-of-type) {
-    margin-right: 32px;
+    li:not(:last-of-type) {
+      margin-right: 32px;
+    }
   }
 }
 

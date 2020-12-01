@@ -2,7 +2,6 @@
   <div id="app">
     <Header />
     <router-view></router-view>
-    <div class="test"></div>
     <Footer />
   </div>
 </template>
@@ -57,11 +56,22 @@ button {
   border: 0;
 }
 
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
 .router-link-exact-active {
   color: red;
 }
 
 .test {
   height: 2000px;
+}
+
+.inner-container {
+  max-width: 768px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 </style>

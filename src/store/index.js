@@ -1,4 +1,5 @@
 // store.js
+import Axios from 'axios';
 import Vue from 'vue';
 import Vuex from 'vuex';
 
@@ -50,6 +51,11 @@ export const store = new Vuex.Store({
       return setTimeout(function () {
         context.commit('increment', payload.by);
       }, payload.duration);
+    },
+    fetchHospitalList: async function (context, payload) {
+      console.log(context, payload);
+      const res = await Axios.get('https://gangnamunni.com/api/hospitals');
+      console.log(res);
     },
   },
 });
