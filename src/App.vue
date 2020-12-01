@@ -34,12 +34,17 @@ export default {
 
 :root {
   --unit: 1px;
-  font-size: calc(var(--unit) * 16);
+  /* font-size: calc(var(--unit) * 16); */
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   margin: 0;
   height: 100vh;
+  font-size: 1.6rem;
 }
 
 a {

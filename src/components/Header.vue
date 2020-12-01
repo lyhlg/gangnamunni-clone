@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header-container horizen-bar">
-      <header>
+      <header class="inner-wrapper">
         <div class="logo">
           <BrandLogo />
         </div>
@@ -25,40 +25,57 @@
         </div>
       </header>
     </div>
-    <div class="sub-header-container">hi</div>
+    <div class="sub-header-container">
+      <div class="sub-header-inner inner-wrapper">병원목록 (1473)</div>
+    </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import BrandLogo from '../assets/logo-kr.svg';
+import { sayHello } from '../mixin/hello';
 
 export default Vue.extend({
   name: 'header',
   components: {
     BrandLogo,
   },
+  mixins: [sayHello],
 });
 </script>
 
 <style lang="scss">
 .header-container {
-  position: sticky;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
   top: 0;
+}
+.sub-header-container {
+  margin-top: 50px;
+  height: 57px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+.sub-header-inner {
+  font-weight: 600;
 }
 .horizen-bar {
   border-bottom: 1px solid rgb(219, 219, 219);
   width: 100%;
 }
-header {
+.inner-wrapper {
   max-width: 768px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  margin: 0 auto;
   padding: calc(var(--unit) * 8) calc(var(--unit) * 16);
   box-sizing: border-box;
+}
+header {
+  height: 50px;
 
   & > div {
     flex: 1;
