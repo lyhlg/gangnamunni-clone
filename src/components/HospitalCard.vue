@@ -71,4 +71,14 @@ em {
 em {
   color: orange;
 }
+
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 30%;
+  }
+  .img {
+    width: unset;
+    height: calc((50vw - 32px) * 0.4);
+  }
+}
 </style>

@@ -53,6 +53,9 @@ export default Vue.extend({
   border-bottom: 1px solid rgb(219, 219, 219);
   width: 100%;
 }
+.inner-container {
+  padding: 0 calc(var(--unit) * 16);
+}
 .inner-wrapper {
   display: flex;
   align-items: center;
@@ -105,6 +108,13 @@ header {
 @media only screen and (max-width: 770px) {
   .contents {
     visibility: hidden;
+  }
+  .logo {
+    image {
+      transform: scale(0.7);
+
+      height: 24px;
+    }
   }
 }
 </style>

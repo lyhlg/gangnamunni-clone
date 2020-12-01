@@ -100,4 +100,12 @@ ul {
     } */
   }
 }
+
+@media only screen and (max-width: 770px) {
+  ul {
+    li {
+      width: calc(50vw - 30px);
+    }
+  }
+}
 </style>

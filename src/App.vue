@@ -74,4 +74,10 @@ ul {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 50%;
+  }
+}
 </style>
